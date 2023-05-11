@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>imagenes/700x700.png</file>
+        <file>imagenes/moneda rotatoria.jpg</file>
+        <file>imagenes/p.png</file>
+        <file>imagenes/PACMAN.png</file>
+        <file>imagenes/700x700 - copia.png</file>
+        <file>imagenes/fotor_2023-5-6_17_47_29.png</file>
+    </qresource>
+</RCC>
