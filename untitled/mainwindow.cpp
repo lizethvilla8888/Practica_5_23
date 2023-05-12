@@ -115,16 +115,10 @@ x331,y34,w34,h66
 x34,y533,w40,h34
 x626,y533,w40,h34
 */
+string nombre;
+nombre ="paredes.txt";
 
-    paredes.push_back(new pared(0,0,700,34)); //0,0,700,34
-    database data; //creamos objeto database
-    string nombre_txt = "paredes.txt", coordenadas;
-    data.set_name(nombre_txt);
-
-
-
-
-
+leer_txt(nombre);
 
 
 
@@ -212,6 +206,38 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
              }
         }
     }   
+}
+
+void MainWindow::leer_txt(string nombre_txt)
+{
+    vector<string>  x;
+    vector<string>  y;
+    vector<string>  ancho;
+    vector<string>  alto;
+
+    int longi, xi_,yi_,w,h;
+
+    database texto;  // defino objeto de la clase database
+    string texto_string;
+
+    texto.set_name(nombre_txt); // le mando el nombre de el archivo el cual quiero leer
+    texto_string = texto.get_all_database(); // le asigno a texto_string todo el texto leido del archivo txt
+
+    x = texto.get_col(0);
+    y = texto.get_col(1);
+    ancho = texto.get_col(2);
+    alto = texto.get_col(3);
+
+    longi = x.size();
+
+    for(int i=0 ; i < longi; i++){
+        xi_ = stoi(x[i]);
+        yi_ = stoi(y[i]);
+        w = stoi(ancho[i]);
+        h = stoi(alto[i]);
+        crear_pared(xi_,yi_,w,h);
+    }
+
 }
 
 void MainWindow::crear_pared(int x, int y, int ancho, int alto)
