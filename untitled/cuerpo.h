@@ -10,7 +10,6 @@ class cuerpo: public QGraphicsPixmapItem
     int posx, posy;
     int velocidad = 5;
 
-
 public:
     cuerpo(int r_, int x, int y);
 

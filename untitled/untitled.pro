@@ -12,6 +12,7 @@ SOURCES += \
     cuerpo.cpp \
     database.cpp \
     enemy.cpp \
+    juego.cpp \
     main.cpp \
     mainwindow.cpp \
     moneda.cpp \
@@ -21,6 +22,7 @@ HEADERS += \
     cuerpo.h \
     database.h \
     enemy.h \
+    juego.h \
     mainwindow.h \
     moneda.h \
     pared.h

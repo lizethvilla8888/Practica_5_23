@@ -48,9 +48,11 @@ private:
 
     void keyPressEvent(QKeyEvent * evento);
     QList<moneda *> eliminarMonedas(QList<moneda *> monedas,int pos);
-    void leer_txt(string nombre_txt);
     void crear_pared(int, int, int ancho, int alto);
     void crear_monedas (int, int, int ancho, int alto);
+
+    void paredes_ ();
+    void monedas_();
 
 
 public slots:

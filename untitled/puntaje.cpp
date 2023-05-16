@@ -1,7 +1,7 @@
 #include "puntaje.h"
-//#include  <QMediaPlayer>
+#include  <QMediaPlayer>
 
-/*
+
 puntaje::puntaje(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
     puntaje_ = 0;
@@ -15,8 +15,8 @@ void puntaje::incremento()
     puntaje_++;
 
     // sonido del pacman comiendo monedas
-    //comer_moneda = new QMediaPlayer();
-    //comer_moneda->setMedia(QUrl("qrc:/new/prefix1/Nueva carpeta/Pacman_Come_Cereza.mp3"));
+    comer_moneda = new QMediaPlayer();
+    comer_moneda->setMedia(QUrl("qrc:/new/prefix1/Nueva carpeta/Pacman_Come_Cereza.mp3"));
 
     if (comer_moneda->state() == QMediaPlayer::PlayingState){
         comer_moneda->setPosition(0);
@@ -26,7 +26,7 @@ void puntaje::incremento()
         comer_moneda->play();
     }
 
-    //setPlainText(QString ("Puntaje: ") + QString::number( puntaje_));
+    setPlainText(QString ("Puntaje: ") + QString::number( puntaje_));
     if (puntaje_ == 51){
         setPlainText(QString ("    GANASTE    "));
         setDefaultTextColor(Qt::black);
@@ -39,4 +39,4 @@ int puntaje::obtener_puntaje()
 {
     return puntaje_;
 }
-*/
+
