@@ -39,6 +39,7 @@ private:
 
     cuerpo *personaje;
     enemy *enemigo;
+    puntaje *puntaje_;
 
     QList<moneda *> monedas;
     QList <pared*> paredes;
@@ -59,6 +60,8 @@ public slots:
     void moveEnemy();
 
 
+private slots:
+    void on_label_linkActivated(const QString &link);
 };
 #endif // MAINWINDOW_H
 

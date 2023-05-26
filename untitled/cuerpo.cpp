@@ -6,7 +6,7 @@ cuerpo::cuerpo(int r_, int x, int y)
     posx = x;
     posy = y;
     setPos(posx,posy);
-    setPixmap(QPixmap(":/new/prefix1/imagenes/PACMAN.png"));
+    //setPixmap(QPixmap(":/new/prefix1/imagenes/PACMAN.png"));
 }
 
 QRectF cuerpo::boundingRect() const

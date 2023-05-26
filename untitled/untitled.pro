@@ -16,7 +16,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     moneda.cpp \
-    pared.cpp
+    pared.cpp \
+    puntaje.cpp
 
 HEADERS += \
     cuerpo.h \
@@ -25,7 +26,8 @@ HEADERS += \
     juego.h \
     mainwindow.h \
     moneda.h \
-    pared.h
+    pared.h \
+    puntaje.h
 
 FORMS += \
     mainwindow.ui

@@ -25,14 +25,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setWindowTitle("Pac Man");
 
-    personaje = new cuerpo(15,60,60); // se crea bolita de pacman
+    personaje = new cuerpo(10,60,60); // se crea bolita de pacman
     scene->addItem(personaje);
 
     enemigo = new enemy(10,120,180); // se crea fantasma
     scene->addItem(enemigo);
 
+    puntaje_ = new puntaje;
+    scene->addItem(puntaje_);
+
     paredes_();
     monedas_();
+
 
     timer = new QTimer();
     connect(timer,SIGNAL(timeout()),this,SLOT(moveEnemy()));
@@ -50,7 +54,7 @@ void MainWindow::keyPressEvent(QKeyEvent *evento){
         personaje->Move_derecha();
         for (int i = 0;i < monedas.size();i++) {
              if(personaje->collidesWithItem(monedas.at(i))){
-                 //puntaje_->incremento(); // incremento de puntaje
+                 puntaje_->incremento(); // incremento de puntaje
                  scene->removeItem(monedas.at(i));
                  monedas.removeAt(i);
               }
@@ -319,7 +323,6 @@ void MainWindow::monedas_()
     crear_monedas(380,375,10,10);
     crear_monedas(430,375,10,10);
     crear_monedas(531,375,10,10);
-   // crear_monedas(50,408,10,10);
     crear_monedas(531,408,10,10);
     crear_monedas(50,444,10,10);
     crear_monedas(103,444,10,10);
@@ -349,10 +352,8 @@ void MainWindow::monedas_()
     crear_monedas(483,510,10,10);
     crear_monedas(531,510,10,10);
     crear_monedas(644,510,10,10);
-    //crear_monedas(50,540,10,10);
     crear_monedas(159,540,10,10);
     crear_monedas(531,540,10,10);
-    //crear_monedas(580,540,10,10);
     crear_monedas(50,574,10,10);
     crear_monedas(103,574,10,10);
     crear_monedas(159,574,10,10);
@@ -360,7 +361,6 @@ void MainWindow::monedas_()
     crear_monedas(305,574,10,10);
     crear_monedas(380,574,10,10);
     crear_monedas(430,574,10,10);
-    //crear_monedas(483,574,10,10);
     crear_monedas(531,574,10,10);
     crear_monedas(580,574,10,10);
     crear_monedas(644,574,10,10);
@@ -380,26 +380,8 @@ void MainWindow::monedas_()
     crear_monedas(531,642,10,10);
     crear_monedas(580,642,10,10);
     crear_monedas(644,642,10,10);
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
-    //crear_monedas();
+
 }
-
-
 
 
 
